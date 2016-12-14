@@ -1,0 +1,53 @@
+create table PROGRAM_INFO
+(
+  id                   NUMBER not null,
+  name                 VARCHAR2(256) not null,
+  source_url           VARCHAR2(256),
+  page_url             VARCHAR2(256),
+  target_url           VARCHAR2(256),
+  visit_number         NUMBER,
+  reply_number         NUMBER,
+  violate_type         NUMBER default 0,
+  media_type           NUMBER default 0,
+  site_id              NUMBER,
+  status               NUMBER default 202 not null,
+  download_status      NUMBER default 101,
+  upload_time          VARCHAR2(50),
+  update_time          DATE,
+  crawl_time           DATE default sysdate,
+  download_finish_time DATE,
+  description          VARCHAR2(4000),
+  ifsendreport         NUMBER,
+  tag                  VARCHAR2(128),
+  enable               NUMBER,
+  spread_manner        NUMBER,
+  check_time           DATE,
+  check_person         VARCHAR2(50),
+  crawl_task_id        NUMBER,
+  frame_url            VARCHAR2(128),
+  page_local_url       VARCHAR2(128),
+  storage_id           NUMBER,
+  proof_status         NUMBER default 306,
+  confidence           FLOAT default 0,
+  proof_finish_time    DATE,
+  rep_status           NUMBER default 400,
+  kws_status           NUMBER default 400,
+  audiosearch_status   NUMBER default 400,
+  decode_status        NUMBER default 400,
+  vsearch_index_status NUMBER default 400,
+  framedeal_status     NUMBER default 400,
+  length               NUMBER default 0,
+  decode_url           VARCHAR2(256),
+  kws_cfdc_status      NUMBER(1) default 0,
+  if_visitable         NUMBER(1) default 1,
+  sniffer_status       NUMBER default 400 not null,
+  sniffer_enable       NUMBER(1) default 0,
+  sniffer_url          VARCHAR2(256),
+  index_status         NUMBER(1) default 0,
+  program_property     NUMBER default 0
+)
+
+
+
+视频
+flashvars="f=http://vod.lzep.cn//2016_video/lztv/20161024_fb.mp4
